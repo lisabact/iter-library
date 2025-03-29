@@ -1,0 +1,549 @@
+html, body {
+    width: 100vw;  
+    overflow-x: hidden; 
+    margin: 0;
+    padding: 0;
+  }
+.mainpage{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background-color: #FAF7F2;
+    justify-content: center; 
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+}
+.mainpage img {
+    
+    object-fit: contain;
+    justify-content: center; 
+    display: flex;
+    align-items: center;
+    margin-bottom: 4vw;
+    width: 100vw; 
+    height: 45vw;
+}
+.h1 {
+    position: absolute;
+    margin-bottom: 31vw  ;
+    margin-right: 29vw;
+    font-family: helvetica;
+    font-size: 3.5vw;
+}
+.active-section {
+    display: flex !important;
+    position: relative; 
+  }
+.popup {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 11;
+}
+
+.popup-content {
+    width: 49.5vw;
+    height: 27vw;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.popup-content img {
+    width: 49.5vw;
+    height: 34vw;
+    object-fit: contain;
+    position: absolute;
+}
+.popup-content button{
+    width: 9.5vw;
+    height: 4vw;
+    object-fit: contain;
+    position: absolute;
+    width: 25%;
+    z-index: 5;
+    background-color:  #FAF7F2;
+    margin-top:  11vw;
+    margin-right:  26vw;
+    font-family: helvetica;
+    font-size: 2.5vh;
+}
+.popup-content h2{
+    width: 100%;
+    z-index: 5;
+    position: absolute;
+    margin-bottom:  17vw;
+    margin-left:  11vw;
+    font-family: helvetica;
+    font-size: 3.3vw;
+}
+.popup-content p{
+    width: 100%;
+    z-index: 5;
+    position: absolute;
+    margin-bottom:  2vw;
+    margin-left:  11vw;
+    font-family: helvetica;
+    font-size: 1.2vw;
+}
+
+.close {
+    position: absolute;
+    top: 1vw;
+    right: 1.5vw;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+.popup-content {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+
+button#lockButton {
+    position: absolute;
+    margin-bottom:  36vw;
+    margin-left: 59vw;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color:  #FAF7F2;
+    border-color: black;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    z-index: 10;
+}
+
+button#lockButton:hover {
+    background-color: #d9cead;
+}
+
+button#lockButton:disabled {
+    background-color: #FAF7F2;
+    cursor: default;
+}
+
+.book {
+    cursor: grab;
+    width: 100vw;  
+    height: 100vh;
+    position: absolute;
+   
+}
+
+.book img {
+    cursor: grab;
+    pointer-events: auto; 
+    width: 5.5vw; 
+    height: 25vw; 
+    user-select: none;
+    position: absolute;
+}
+
+
+.book2 {
+    transition: transform 0.3s ease-in-out;
+}
+.book2.locked:hover {
+    transform: scale(1.1);
+}
+.book3 {
+    transition: transform 0.3s ease-in-out;
+}
+.book3.locked:hover {
+    transform: scale(1.1);
+}
+.book5 {
+    transition: transform 0.3s ease-in-out;
+}
+.book5.locked:hover {
+    transform: scale(1.1);
+}
+.book8 {
+    transition: transform 0.3s ease-in-out;
+}
+.book8.locked:hover {
+    transform: scale(1.1);
+}
+
+
+
+.firstbook {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background-color: #FAF7F2;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    
+}
+.screen1{
+    object-fit: contain;
+    z-index: 1;
+    justify-content: center; 
+    display: flex;
+    align-items: center;
+    width: 100vw; 
+    height: 45vw;
+    margin-bottom: 4vw;
+}
+
+
+ .h11 {
+    position: absolute;
+    margin-bottom: 31vw  ;
+    margin-right: 32vw;
+    font-family: helvetica;
+    font-size: 3.5vw;
+}
+.p1{
+    width: 100%;
+    z-index: 5;
+    position: absolute;
+    margin-bottom:  33vw;
+    margin-left:  111vw;
+    font-family: helvetica;
+    font-size: 1.3vw;
+}
+.exit{
+    position: absolute;
+    margin-top: 31.5vw;
+    margin-left: 55vw;
+    width: 3.5vw;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    overflow: hidden;
+    z-index: 11;
+}
+.exit img{
+    max-width: 100%;
+    max-height: 100%;
+     object-fit: contain; 
+}
+.frontbook{
+    position: absolute;
+    width: 18vw;
+    margin-right: 38vw;
+    margin-top: 11.5vw;
+}
+.frontbook2{
+    position: absolute;
+    width: 18vw;
+    margin-left: 24vw;
+    margin-top: 11.5vw;
+}
+.photo {
+    position: absolute;
+    z-index: 2; 
+    margin-right: 5vw;
+    margin-top:2.5vw;
+    transition: opacity 1s ease-in-out;
+}
+.photo img{
+    object-fit: contain;
+    width: 20vw; 
+    height: auto;
+    position: absolute;
+}
+
+.london1, .london2, .london3 {
+    width: 20vw; 
+    height: auto; 
+    position: absolute;
+}
+
+
+@keyframes fadeAnimation {
+    0% { opacity: 1; }
+    33.33% { opacity: 0; }
+    66.66% { opacity: 0; }
+    100% { opacity: 1; }
+}
+.london1 { animation: fadeAnimation 6s infinite; }
+.london2 { animation: fadeAnimation 6s infinite 2s; }
+.london3 { animation: fadeAnimation 6s infinite 4s; }
+
+.popup2 {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 11;
+}
+
+.popup2-content {
+    width: 49.5vw;
+    height: 27vw;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.popup2-content img {
+    width: 49.5vw;
+    height: 34vw;
+    object-fit: contain;
+    position: absolute;
+}
+
+.popup2-content h2{
+    width: 100%;
+    z-index: 5;
+    position: absolute;
+    margin-bottom:  15vw;
+    margin-left:  11vw;
+    font-family: helvetica;
+    font-size: 3.3vw;
+}
+.popup2-content p{
+    width: 100%;
+    z-index: 5;
+    position: absolute;
+    margin-bottom:  0vw;
+    margin-left:  11vw;
+    font-family: helvetica;
+    font-size: 1.2vw;
+}
+input {
+    width: 12vw;
+    height: 3vw;
+    border: 0.1vw solid #ccc;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 15;
+    background-color:  #FAF7F2;
+    margin-top:  11vw;
+    margin-right:  26vw;
+}
+
+
+.firstbook button{
+    position: absolute;
+    margin-bottom: 13vw;
+    margin-left: 33vw;
+    transform: translateX(-50%);
+    padding: 1vw 2vw;
+    font-size: 1vw;
+    background-color:  #FAF7F2;
+    border-color: black;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    z-index: 11;
+}
+.secondbook{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background-color: #FAF7F2;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  
+}
+.screen2{
+    object-fit: contain;
+    z-index: 1;
+    justify-content: center;
+    align-items: center; 
+    display: flex;
+    width: 100vw; 
+    height: 45vw;
+    margin-bottom: 4vw;
+}
+.h22 {
+    position: absolute;
+    margin-bottom: 31vw  ;
+    margin-right: 35vw;
+    font-family: helvetica;
+    font-size: 3.5vw;
+}
+.photo2 {
+    position: absolute;
+    z-index: 2; 
+    margin-right: 5vw;
+    margin-top:4vw;
+    transition: opacity 1s ease-in-out;
+}
+.secondbook button{
+    position: absolute;
+    margin-bottom: 13vw;
+    margin-left: 33vw;
+    transform: translateX(-50%);
+    padding: 1vw 2vw;
+    font-size: 1vw;
+    background-color:  #FAF7F2;
+    border-color: black;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    z-index: 11;
+}
+.woman1, .woman2, .woman3 {
+    width: 20vw; 
+    height: auto; 
+    position: absolute;
+}
+
+@keyframes fadeAnimation {
+    0% { opacity: 1; }
+    33.33% { opacity: 0; }
+    66.66% { opacity: 0; }
+    100% { opacity: 1; }
+}
+.woman1 { animation: fadeAnimation 6s infinite; }
+.woman2 { animation: fadeAnimation 6s infinite 2s; }
+.woman3 { animation: fadeAnimation 6s infinite 4s; }
+
+.thirdbook{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background-color: #FAF7F2;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    overflow: hidden;
+    
+}
+.h3{
+    position: absolute;
+    margin-bottom:  35vw;
+    margin-right: 32vw;
+    font-family: helvetica;
+    font-size: 3.5vw;
+}
+.screen3{
+    object-fit: contain;
+    z-index: 1;
+    justify-content: center; 
+    display: flex;
+    align-items: center;
+    width: 100vw; 
+    height: 45vw;
+    margin-bottom: 4vw;
+}
+
+.photo3 {
+    position: absolute;
+    z-index: 2; 
+    margin-right: 51.5vw;
+    margin-top: 3.5vw;
+    transition: opacity 1s ease-in-out;
+}
+.thirdbook button{
+    position: absolute;
+    margin-bottom: 15vw;
+    margin-right:  35vw;
+    transform: translateX(-50%);
+    padding: 1vw 2vw;
+    font-size: 1vw;
+    background-color:  #FAF7F2;
+    border-color: black;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    z-index: 11;
+}
+.pirate1, .pirate2, .pirate3 {
+    width: 20vw; 
+    height: auto; 
+    position: absolute;
+}
+
+@keyframes fadeAnimation {
+    0% { opacity: 1; }
+    33.33% { opacity: 0; }
+    66.66% { opacity: 0; }
+    100% { opacity: 1; }
+}
+.pirate1 { animation: fadeAnimation 6s infinite; }
+.pirate2 { animation: fadeAnimation 6s infinite 2s; }
+.pirate3 { animation: fadeAnimation 6s infinite 4s; }
+
+.fourbook{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background-color: #FAF7F2;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.screen4{
+    object-fit: contain;
+    z-index: 1;
+    justify-content: center; 
+    display: flex;
+    align-items: center;
+    width: 100vw; 
+    height: 45vw;
+    margin-bottom: 4vw;
+}
+.h4{
+    position: absolute;
+    margin-bottom:  35vw;
+    margin-right: 29vw;
+    font-family: helvetica;
+    font-size: 3.5vw;
+}
+.fourbook button{
+    position: absolute;
+    margin-bottom: 15vw;
+    margin-right:  35vw;
+    transform: translateX(-50%);
+    padding: 1vw 2vw;
+    font-size: 1vw;
+    background-color:  #FAF7F2;
+    border-color: black;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    z-index: 11;
+}
+.photo4 {
+    position: absolute;
+    z-index: 2; 
+    margin-right: 52.5vw;
+    margin-top: 3vw;
+    transition: opacity 1s ease-in-out;
+}
+
+.dance1, .dance2, .dance3 {
+    width: 20vw; 
+    height: auto; 
+    position: absolute;
+}
+
+@keyframes fadeAnimation {
+    0% { opacity: 1; }
+    33.33% { opacity: 0; }
+    66.66% { opacity: 0; }
+    100% { opacity: 1; }
+}
+.dance1 { animation: fadeAnimation 6s infinite; }
+.dance2 { animation: fadeAnimation 6s infinite 2s; }
+.dance3 { animation: fadeAnimation 6s infinite 4s; }
+
